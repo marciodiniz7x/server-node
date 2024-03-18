@@ -26,7 +26,7 @@ app.post('/idade', urlencodedParser, function(req, res) {
         var valores = {
             'nome': req.body.nome,
             'anonasc': req.body.anonasc,
-            'idade': (hoje.getFullYear() = parseInt(req.body.anonasc))
+            'idade': (hoje.getFullYear() - parseInt(req.body.anonasc))
         };
         for (var chave in valores) {
             dado = dado.toString().replace("{{" + chave + "}}", valores[chave]);
